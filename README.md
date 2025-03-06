@@ -8,7 +8,7 @@ This repository contains a Python project for building and deploying a text clas
 The model is an ensemble of five TF-IDF vectorizers and five Keras DNN models, trained on the NLTK movie reviews dataset for sentiment analysis (positive/negative classification).
 
 ## Repository Structure
-'''
+```
 ensemble_pyfunc/
 ├── requirements.txt # Project dependencies
 └── src/
@@ -19,7 +19,7 @@ ensemble_pyfunc/
 ├── train_model.py # Training, logging (to MLflow), and PyFunc registration
 └── predict_from_disk.py # load and infrence from disk
 └── predict_with_pyfunc_local.py # load and infrence from pyfunc model
-'''
+```
 *   **`ensemble_model.py`:**  Defines the `MovieReviewClassifier` class, which is a custom MLflow PyFunc model.  This class handles loading the individual TF-IDF and DNN models from either a local directory (for Docker) or from MLflow artifacts (for Databricks).  It also implements the `predict` method for making predictions.
 
 *   **`train_model.py`:** This script performs the following:
